@@ -1,0 +1,19 @@
+{
+  "name": "ethanjames",
+  "version": "1.0.0",
+  "description": "Personal website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ethan-santiago-james/ethanjames.com.git"
+  },
+  "author": "Ethan James",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ethan-santiago-james/ethanjames.com/issues"
+  },
+  "homepage": "https://github.com/ethan-santiago-james/ethanjames.com#readme"
+}
