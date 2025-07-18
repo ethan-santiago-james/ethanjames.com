@@ -6,10 +6,61 @@
         <title>Ethan James</title>
         <link href="style.css" rel="stylesheet">
 
+        <script>
+            
+
+            window.addEventListener("DOMContentLoaded",() => {
+
+                const elemOne = document.getElementById('java-developer-container')
+                const elemTwo = document.getElementById('web-developer-container')
+                const elemThree =  document.getElementById('software-tester-container')
+                const elemFour = document.getElementById('notetaker-container')
+
+                const workButton = document.getElementById("work-link")
+
+                workButton.addEventListener('click',() => {
+
+                    elemOne.classList.add("random")
+                    elemTwo.classList.add("random")
+                    elemThree.classList.add("random")
+                    elemFour.classList.add("random")
+
+                })
+
+                window.addEventListener('wheel', (event) => {
+
+                    const scrollY = window.scrollY
+                    
+                    if(scrollY > 800 && scrollY < 1200) {
+
+                        elemOne.classList.add("random")
+                    }
+
+                    if(scrollY > 900 && scrollY < 1200) {
+
+                        elemTwo.classList.add("random")
+                    }
+
+                    if(scrollY > 920 && scrollY < 1200) {
+
+                        elemThree.classList.add("random")
+                    }
+
+                    if(scrollY > 940 && scrollY < 1200) {
+
+                        elemFour.classList.add("random")
+                    }
+                })
+
+            })
+           
+        </script>
+
     </head>
 
     <body>
 
+        <div class="random"></div>
         <div id="header">
 
             <div id="header-container">
@@ -47,7 +98,10 @@
 
                 <div id="link-container">
 
-                    <button id="resume-button">Resume</button>
+                    <a href="res/ethan-james-cv (1).pdf">
+
+                        <button id="resume-button">Resume</button>
+                    </a>
 
                     
                     <a href="https://www.linkedin.com/in/ethansantiagojames/">
@@ -145,7 +199,7 @@
         
             <div id="projects-container">
 
-                <h2 id="project-header" style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FEATURED PROJECTS</h2>
+                <h2 id="project-header" style="color: black;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FEATURED PROJECTS</h2>
                 <div class="project-container" id="lecture-cram-planner">
 
                     <img src="res/lcp.png">
@@ -265,7 +319,14 @@
 
                     <h1>Experiences</h1>
 
-                    <div style="background-color: white;"id="java-developer-container">
+                    <div style="background: linear-gradient(
+  to right,
+  #ffffff,   /* white */
+  #ffe5b4,   /* light orange / peach */
+  #f97316,   /* medium orange */
+  #ea580c,   /* deep orange */
+  #c2410c    /* burnt orange */
+);"id="java-developer-container">
 
                         <h2 style="color: #F29111; padding-left: 30px;">Freelance</h2>
                         <h3 style="color: #F29111; padding-left: 30px;">Java Developer</h3>
@@ -280,21 +341,35 @@
 
                     </div>
 
-                    <div style="background-color: yellow; color: black; padding-left: 40px; padding-bottom: 40px;" id="web-developer-container">
+                    <div style="background: linear-gradient(
+  to right,
+  #fff700,  /* bright yellow */
+  #d4d400,  /* mustard yellow */
+  #a1a100,  /* olive yellow */
+  #303030,  /* dark gray/near black */
+  #000000   /* black */
+); color: yellow; padding-left: 40px; padding-bottom: 40px;" id="web-developer-container">
 
-                        <h2>Freelance</h2>
-                        <h3>Web Developer</h3>
-                        <h4>2024 - Present</h4>
+                        <h2 style="color: black;">Freelance</h2>
+                        <h3 style="color: black;">Web Developer</h3>
+                        <h4 style="color: black;">2024 - Present</h4>
 
                         <ul>
 
-                            <li>Developed a full-stack web application that has helped over 50 university students catch up on missed lectures by having the application generate a timetable for them</li>
-                            <li>Hosted a web service to communicate with a database that has allowed over 70 players to view, and strive for leaderboard scores on a zombie horror game developed using Unity</li>
+                            <li style="background: black;">Developed a full-stack web application that has helped over 50 university students catch up on missed lectures by having the application generate a timetable for them</li>
+                            <li style="background: black;">Hosted a web service to communicate with a database that has allowed over 70 players to view, and strive for leaderboard scores on a zombie horror game developed using Unity</li>
                         </ul>
 
                     </div>
 
-                    <div style="background-color: aqua; color: white; padding-left: 40px; padding-bottom: 40px;" id="software-tester-container">
+                    <div style="background: linear-gradient(
+  to right,
+  #ffffff,    /* white */
+  #cce7ff,    /* very light blue */
+  #66b2ff,    /* sky blue */
+  #007bff,    /* vibrant blue */
+  #004080     /* deep navy blue */
+); color: black; padding-left: 40px; padding-bottom: 40px;" id="software-tester-container">
 
                         <h2>uTest</h2>
                         <h3>Software Tester</h3>
@@ -309,7 +384,13 @@
 
                     </div>
 
-                    <div style="background-color: blue; color: yellow; padding-left: 40px; padding-bottom: 40px;" id="notetaker-container">
+                    <div style="background: linear-gradient(
+  to right,
+  #004080,   /* deep navy blue */
+  #007bff,   /* bright blue */
+  #ffd93b,   /* warm yellow */
+  #fff176    /* light yellow */
+); color: yellow; padding-left: 40px; padding-bottom: 40px;" id="notetaker-container">
 
                         <h2>University of Otago</h2>
                         <h3>Disability & Information Services Notetaker</h3>
@@ -317,8 +398,8 @@
 
                         <ul>
 
-                            <li>Produced over 70 detailed note summaries to aid in the learning of students struggling with a disability at university</li>
-                            <li>Produced note summaries for "Algorithms & Data Structures", "HCI & User Experience", and "Web, Databases and Networks" university papers</li>
+                            <li style="width: 500px;">Produced over 70 detailed note summaries to aid in the learning of students struggling with a disability at university</li>
+                            <li style="width: 500px;">Produced note summaries for "Algorithms & Data Structures", "HCI & User Experience", and "Web, Databases and Networks" university papers</li>
                         </ul>
 
                     </div>
