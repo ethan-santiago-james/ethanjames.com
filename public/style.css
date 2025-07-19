@@ -50,14 +50,14 @@
 
     top: 30px;
     left: 70vw;
-    color: white;
+    color: black;
 }
 
 #resume-link {
 
     top: 30px;
     left: 75vw;
-    color: white;
+    color: black;
 }
 
 /* description */
@@ -71,14 +71,21 @@
     height: 550px;
     width: 1728px;
     background: linear-gradient(
-        90deg,
-        #ff6b6b,   /* redish */
-        #feca57,   /* orange */
-        #1dd1a1,   /* mint green */
-        #54a0ff,   /* light blue */
-        #5f27cd    /* purple */
+        to left,
+        #f0f0f0,  /* light grey */
+        #b0b0b0,  /* mid grey */
+        #808080,  /* darker grey */
+        #404040,  /* very dark grey */
+        #000000   /* black */
     );
-    border: 1px solid lightgreen;
+    border: 1px solid linear-gradient(
+        to right,
+        #f0f0f0,  /* light grey */
+        #b0b0b0,  /* mid grey */
+        #808080,  /* darker grey */
+        #404040,  /* very dark grey */
+        #000000   /* black */
+    );
 
     top: 80px;
     left: 192px;
@@ -143,7 +150,7 @@
     background: linear-gradient(
         to right,
         #f0f0f0,  /* light grey */
-        #b0b0b0,  /* mid grey */
+        #141313,  /* mid grey */
         #808080,  /* darker grey */
         #404040,  /* very dark grey */
         #000000   /* black */
@@ -160,7 +167,7 @@
     display: flex;
     gap: 115px;
 
-    top: 650px;
+    top: 600px;
     left: 0vw;
     overflow-x: hidden;
 
@@ -180,7 +187,7 @@
 .project-container {
 
     width: 384px;
-    height: 650px;
+    height: 600px;
     padding-bottom: 20px;
     background-color: black;
     color: white;
@@ -214,13 +221,24 @@ img {
     padding-left: 5px;
 }
 
-.download-button {
+#download {
 
-    color: white;
-    width: 100px;
-    height: 100px;
-    background-color: lime;
     margin-left: 40%;
+}
+
+#website {
+
+    margin-left: 37%;
+    width: 80px;
+    height: 25px;
+}
+
+#play {
+
+    margin-left: 42%;
+    height: 40px;
+    width: 40px;
+
 }
 
 /* education-experience */
@@ -245,14 +263,10 @@ img {
         #fbbf24,   /* golden yellow */
         #9a3412    /* burnt sienna */
     );
-    top: 1445px;
+    top: 1300px;
+    min-height: 1445px;
     position: absolute;
     left: 0vw;
-    overflow-x: hidden;
-
-    animation: fade-in linear both;
-    animation-timeline: view();
-    animation-range: entry 0% cover 10%;
 
 }
 
