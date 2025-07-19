@@ -17,6 +17,7 @@
                 const elemTwo = document.getElementById('web-developer-container')
                 const elemThree =  document.getElementById('software-tester-container')
                 const elemFour = document.getElementById('notetaker-container')
+                const elemFive = document.getElementById('projects-header')
 
                 const workButton = document.getElementById("work-link")
 
@@ -33,6 +34,8 @@
 
                     const scrollY = window.scrollY
                     
+                    elemFive.classList.add("random2")
+                    elemFive.style.opacity = "1";
                     if(scrollY > 800 && scrollY < 1200) {
 
                         elemOne.classList.add("random")
@@ -63,6 +66,7 @@
     <body>
 
         <div class="random"></div>
+        <div class="random2"></div>
         <div id="header">
 
             <div id="header-container">
@@ -201,7 +205,7 @@
         
             <div id="projects-container">
 
-                <h2 id="project-header" style="color: black;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FEATURED PROJECTS</h2>
+                <h2 id="projects-header" style="color: black;">Featured Projects</h2>
                 <div class="project-container" id="lecture-cram-planner">
 
                     <img src="res/lcp.png">
@@ -278,14 +282,20 @@
 
                     <h1>Education</h1>
 
-                    <div style="padding-left: 100px; background-color: darkblue; color: yellow;" id="otago-container">
+                    <div style="background: linear-gradient(
+  to right,
+  #004080,   /* deep navy blue */
+  #007bff,   /* bright blue */
+  #ffd93b,   /* warm yellow */
+  #fff176    /* light yellow */
+); padding-left: 100px; background-color: darkblue; color: black;" id="otago-container">
 
                         <h2>University of Otago</h2>
                         <h3>Software Engineering BsC</h3>
                         <h4>2024 - 2026</h4>
                         <h3>Computer science courses</h3>
 
-                        <ul>
+                        <ul style="padding-left: 60px;">
 
                             <div class="badge">Programming with Java</div>
                             <div class="badge">Software Development</div>
@@ -298,7 +308,7 @@
                     <br>
                     <br>
 
-                    <div style="padding-left: 100px; background-color: #10162F; color: #CCA900;" id="back-end-engineer-container">
+                    <div style="background: linear-gradient(135deg, #0B1D51, #1E3A8A, #FFD600); padding-left: 100px; background-color: #10162F; color: #CCA900;" id="back-end-engineer-container">
 
                         <h2>Codecademy</h2>
                         <h3>Back End Engineer Professional Certification</h3>
