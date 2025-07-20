@@ -59,6 +59,33 @@
                     }
                 })
 
+                window.addEventListener('touchend', (event) => {
+
+                    const scrollY = event.changedTouches[0].clientY
+                    
+                    elemFive.classList.add("random2")
+                    elemFive.style.opacity = "1";
+                    if(scrollY > 3100) {
+
+                        elemOne.classList.add("random")
+                    }
+
+                    if(scrollY > 3300) {
+
+                        elemTwo.classList.add("random")
+                    }
+
+                    if(scrollY > 3500) {
+
+                        elemThree.classList.add("random")
+                    }
+
+                    if(scrollY > 3700) {
+
+                        elemFour.classList.add("random")
+                    }
+                })
+
             })
            
         </script>
