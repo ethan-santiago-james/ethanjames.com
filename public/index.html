@@ -7,12 +7,14 @@
         <meta name="viewport" content="width-device-width, initial-scale=1.0">
         <title>Ethan James</title>
         <link href="style.css" rel="stylesheet">
+        <link href="phone.css" rel="stylesheet">
 
         <script>
             
 
             window.addEventListener("DOMContentLoaded",() => {
 
+                document.getElementById('description-container').offsetLeft = "0"
                 const elemOne = document.getElementById('java-developer-container')
                 const elemTwo = document.getElementById('web-developer-container')
                 const elemThree =  document.getElementById('software-tester-container')
@@ -84,50 +86,55 @@
             
             <div style="color: white;" id="description-container">
 
-                <h2 id="welcome-message">Hello, I'm Ethan James</h2>
-                <p style="text-align: justify;" id="ethan-description">Welcome, I'm a Java, and Python developer with 2 years experience. I have a proven 
-                ability to build software that has an impact for the betterment of society. I am highly proficient in Java, SQL, Python, 
-                and JavaScript. Seeking a software engineering intern position to drive innovation, optimise performance at scale, and 
-                use my technical skills to make a real world impact.</p>
+                <div style="margin-left: 50px;" id="welcome-container">
 
-                <p id="skills-header">I'm currently developing with,</p>
+                    <h2 id="welcome-message">Hello, I'm Ethan James</h2>
+                    <p style="text-align: justify;" id="ethan-description">Welcome, I'm a Java, and Python developer with 2 years experience. I have a proven 
+                    ability to build software that has an impact for the betterment of society. I am highly proficient in Java, SQL, Python, 
+                    and JavaScript. Seeking a software engineering intern position to drive innovation, optimise performance at scale, and 
+                    use my technical skills to make a real world impact.</p>
 
-                <ul id="skills">
+                    <p id="skills-header">I'm currently developing with,</p>
 
-                    <li>Java</li>
-                    <li>Python</li>
-                    <li>HTML/CSS</li>
-                    <li>Node.js</li>
-                    <li>Express.js</li>
-                    <li>Unity (C#)</li>
-                </ul>
+                    <ul id="skills">
 
-                <div id="link-container">
+                        <li>Java</li>
+                        <li>Python</li>
+                        <li>HTML/CSS</li>
+                        <li>Node.js</li>
+                        <li>Express.js</li>
+                        <li>Unity (C#)</li>
+                    </ul>
 
-                    <a href="res/ethan-james-cv (1).pdf">
+                    <div id="link-container">
 
-                        <button id="resume-button">Resume</button>
-                    </a>
+                        <a href="res/ethan-james-cv (1).pdf">
 
-                    
-                    <a href="https://www.linkedin.com/in/ethansantiagojames/">
+                            <button id="resume-button">Resume</button>
+                        </a>
 
-                        <button id="linkedin-button">LinkedIn</button>
-                    </a>
+                        
+                        <a href="https://www.linkedin.com/in/ethansantiagojames/">
 
-                    <a href="https://github.com/ethan-santiago-james">
+                            <button id="linkedin-button">LinkedIn</button>
+                        </a>
 
-                        <button id="github-button">GitHub</button>
-                    </a>
+                        <a href="https://github.com/ethan-santiago-james">
 
-                    <a href="jamet966@student.otago.ac.nz">
+                            <button id="github-button">GitHub</button>
+                        </a>
 
-                        <button id="email-button">Email</button>
+                        <a href="jamet966@student.otago.ac.nz">
 
-                    </a>
+                            <button id="email-button">Email</button>
 
+                        </a>
+
+
+                    </div>
 
                 </div>
+                
 
                 <div style="color: black;" id="skills-container">
 
@@ -288,18 +295,18 @@
   #007bff,   /* bright blue */
   #ffd93b,   /* warm yellow */
   #fff176    /* light yellow */
-); padding-left: 100px; background-color: darkblue; color: black;" id="otago-container">
+); text-align: center; background-color: darkblue; color: black;" id="otago-container">
 
                         <h2>University of Otago</h2>
                         <h3>Software Engineering BsC</h3>
                         <h4>2024 - 2026</h4>
                         <h3>Computer science courses</h3>
 
-                        <ul style="padding-left: 60px;">
+                        <ul style="text-align: center;">
 
-                            <div class="badge">Programming with Java</div>
+                            <div class="badge" style="margin-left: 30px;">Programming with Java</div>
                             <div class="badge">Software Development</div>
-                            <div class="badge">Algorithms & Data Structures</div>
+                            <div class="badge" style="margin-left: 30px;">Algorithms & Data Structures</div>
                             <div class="badge">HCI & User Experience</div>
                         </ul>
 
@@ -308,7 +315,7 @@
                     <br>
                     <br>
 
-                    <div style="background: linear-gradient(135deg, #0B1D51, #1E3A8A, #FFD600); padding-left: 100px; background-color: #10162F; color: #CCA900;" id="back-end-engineer-container">
+                    <div style="background: linear-gradient(135deg, #0B1D51, #1E3A8A, #FFD600); background-color: #10162F; color: #CCA900; text-align: center;" id="back-end-engineer-container">
 
                         <h2>Codecademy</h2>
                         <h3>Back End Engineer Professional Certification</h3>
@@ -318,9 +325,9 @@
                         <ul>
 
                             <div class="badge">HTML, CSS, JavaScript, Node.js</div>
-                            <div class="badge">Express.js, PostgreSQL</div>
+                            <div class="badge" style="margin-left: 30px;">Express.js, PostgreSQL</div>
                             <div class="badge">Web Security, Scalability</div>
-                            <div class="badge">Data Structures, and Algorithms</div>
+                            <div class="badge" style="margin-left: 30px;">Data Structures, and Algorithms</div>
                         </ul>
 
                     </div>
@@ -403,8 +410,8 @@
 
                         <ul>
 
-                            <li style="width: 500px;">Produced over 70 detailed note summaries to aid in the learning of students struggling with a disability at university</li>
-                            <li style="width: 500px;">Produced note summaries for "Algorithms & Data Structures", "HCI & User Experience", and "Web, Databases and Networks" university papers</li>
+                            <li>Produced over 70 detailed note summaries to aid in the learning of students struggling with a disability at university</li>
+                            <li>Produced note summaries for "Algorithms & Data Structures", "HCI & User Experience", and "Web, Databases and Networks" university papers</li>
                         </ul>
 
                     </div>

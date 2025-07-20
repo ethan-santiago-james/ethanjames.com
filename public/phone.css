@@ -1,17 +1,8 @@
-/* header */
-
-@media (min-width: 770px) {
+@media (max-width: 768px) {
 
     body {
 
-        background: linear-gradient(
-            to left,
-            #f0f0f0,  /* light grey */
-            #b0b0b0,  /* mid grey */
-            #808080,  /* darker grey */
-            #404040,  /* very dark grey */
-            #000000   /* black */
-        );
+        background: black;
         overscroll-behavior: none;
     }
 
@@ -28,21 +19,15 @@
 
     #pfp {
 
-        width: 70px;
-        height: 70px;
+        width: 50px;
+        height: 50px;
+        top: 15px;
         z-index: 2;
         position: fixed;
-        left: 100px;
-    }
-
-    #front-page {
-
-        display: flex;
     }
 
     #header-container {
 
-        display: flex;
         gap: 100px;
 
         background-color: lightblue;
@@ -55,34 +40,36 @@
 
     #ethan-james {
 
-        top: 7.5px;
-        left: 192px;
-        font-size: 50px;
+        top: 27.5px;
+        left: 70px;
+        font-size: 20px;
 
     }
 
     #work-link {
 
         top: 30px;
-        left: 70vw;
+        left: 75%;
         color: black;
     }
 
     #resume-link {
 
         top: 30px;
-        left: 75vw;
+        left: 85%;
         color: black;
     }
 
     /* description */
 
-
     #description-container {
 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         padding-top: 2%;
-        position: absolute;
-        height: 550px;
+        height: 1700px;
         width: 100%;
         margin-left: -8px;
         background: linear-gradient(
@@ -100,7 +87,8 @@
 
     #welcome-message {
 
-        padding-left: 57px;
+        margin-top: 50px;
+        text-align: center;
 
     }
 
@@ -109,14 +97,9 @@
         width: 384px;
     }
 
-    #link-container {
-
-        display: flex;
-        gap: 39px;
-    }
-
     #resume-button {
 
+        margin-left: calc((100vw - 397.82px) / 2);
         background-color: red;
         color: white;
     }
@@ -178,8 +161,7 @@
     #projects-container {
 
         padding-top: 5%;
-        position: absolute;
-        height: 700px;
+        height: 1400px;
         width: 100%;
         border-top: 5px solid black;
         border-bottom: 5px solid black;
@@ -192,7 +174,6 @@
             #000000   /* black */
         );
 
-        display: flex;
         gap: 50px;
 
         top: 600px;
@@ -273,7 +254,6 @@
 
     #education-experience-container {
 
-        display: flex;
         width: 100%;
         background: linear-gradient(
         to right,
@@ -293,7 +273,6 @@
         );
         top: 1300px;
         min-height: 1445px;
-        position: absolute;
         left: 0vw;
 
     }
@@ -302,12 +281,14 @@
 
         padding-left: 96px;
         padding-right: 96px;
+        text-align: center;
     }
 
     #education-container {
 
         padding-left: 96px;
         padding-right: 96px;
+        text-align: center;
 
     }
 
@@ -356,17 +337,26 @@
     #skills-container {
 
         display: block;
-        margin-left: 864px;
-        margin-top: -450px;
-        width: fit-content;
+        width: 50vw;
         height: 550px;
+        border-radius: 20%;
+        background-color: white;
+        
+    }
+
+    #skills-container h1 {
+
+        text-align: center;
+    }
+
+    #skills-container ul, strong {
+
+        margin-left: 20%;
     }
 
     #skills-container-two {
 
         display: block;
-        margin-left: 1152px;
-        margin-top: -450px;
         width: fit-content;
         height: 50px;
     }
@@ -390,4 +380,5 @@
         
         transform: scale(1.15);
     }
+
 }
