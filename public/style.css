@@ -237,7 +237,8 @@
     .project-container:hover {
 
         z-index: 3;
-        transform: scale(1.1);
+
+        transform: scale(1.1) translateX(-20px);
         
     }
 
@@ -293,7 +294,7 @@
         );
         border-top: 5px solid black;
         top: 1300px;
-        min-height: 1445px;
+        height: 1000px;
         position: absolute;
         left: 0vw;
 
@@ -358,17 +359,19 @@
 
     #skills-container {
 
-        padding-top: 2%;
-        display: block;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
         box-sizing: border-box;
         width: fit-content;
-        height: 550px;
+        height: fit-content;
     }
 
     #skills-container-two {
 
         padding-top: 2%;
-        display: block;
+        display: grid;
+        box-sizing: border-box;
         width: fit-content;
         height: 50px;
     }
@@ -377,11 +380,14 @@
 
         transition: transform 0.3s ease;
         transform: scale(1);
+        border: 1px solid black;
+        background: darkgray;
+        padding-right: 30px;
     }
 
     #skills-container:hover > ul {
     
-        transform: scale(1.15);
+        transform: scale(1.1);
     }
 
     #skills-container-two > * {
@@ -391,6 +397,31 @@
 
     #skills-container-two:hover > * {
         
-        transform: scale(1.15);
+        transform: scale(1.1);
+    }
+
+    /* footer */
+
+    #footer-container {
+
+        display: flex;
+        align-items: center;
+        gap: 20vw;
+        top: 2745px;
+        position: absolute;
+        background: gray;
+        width: 100%;
+        height: 100px;
+    }
+
+    #footer-resume {
+
+        left: 70%;
+
+    }
+
+    #footer-work {
+
+        left: 75%;
     }
 }

@@ -311,7 +311,7 @@
 
         text-align: center;
         margin-right: 0px;
-
+        padding: 0;
     }
 
     #skills-container {
@@ -320,7 +320,7 @@
         display: block;
         width: fit-content;
         height: fit-content;
-        text-align: center;
+        text-align: left;
         margin-left: auto;
         margin-right: auto;
     }
@@ -331,9 +331,20 @@
         display: block;
         width: fit-content;
         height: 550px;
-        text-align: center;
+        text-align: left;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    /* footer */
+
+    #footer-container {
+
+        top: 6000px;
+        position: absolute;
+        background: gray;
+        width: 100%;
+        margin-left: -8px;
     }
 
 }
