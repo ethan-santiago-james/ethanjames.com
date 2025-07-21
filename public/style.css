@@ -12,6 +12,7 @@
             #404040,  /* very dark grey */
             #000000   /* black */
         );
+        overflow-x: hidden;
         overscroll-behavior: none;
     }
 
@@ -80,8 +81,9 @@
 
     #description-container {
 
-        padding-top: 2%;
         position: absolute;
+        display: flex;
+        gap: 50px;
         height: 550px;
         width: 100%;
         margin-left: -8px;
@@ -96,6 +98,12 @@
         border-bottom: 5px solid white;
         top: 80px;
 
+    }
+
+    #welcome-container {
+
+        padding-right: 50px;
+        border-right: 5px solid black;
     }
 
     #welcome-message {
@@ -215,7 +223,7 @@
     .project-container {
 
         width: 384px;
-        height: 600px;
+        height: fit-content;
         padding-bottom: 20px;
         background-color: black;
         color: white;
@@ -276,21 +284,14 @@
         display: flex;
         width: 100%;
         background: linear-gradient(
-        to right,
-        #7f4f24,   /* deep brown */
-        #d4a373,   /* warm tan */
-        #ed8936,   /* pumpkin orange */
-        #fbbf24,   /* golden yellow */
-        #9a3412    /* burnt sienna */
+            to left,
+            #f0f0f0,  /* light grey */
+            #b0b0b0,  /* mid grey */
+            #808080,  /* darker grey */
+            #404040,  /* very dark grey */
+            #000000   /* black */
         );
-        border: 1px solid linear-gradient(
-            to right,
-            #7f4f24,   /* deep brown */
-            #d4a373,   /* warm tan */
-            #ed8936,   /* pumpkin orange */
-            #fbbf24,   /* golden yellow */
-            #9a3412    /* burnt sienna */
-        );
+        border-top: 5px solid black;
         top: 1300px;
         min-height: 1445px;
         position: absolute;
@@ -327,6 +328,7 @@
 
         opacity: 0;
         transform: translateX(1000px);
+        box-shadow: 10px 10px 12px rgba(0,0,0,0.3);
         transition: none;
         
     }
@@ -348,6 +350,7 @@
         color: white;
         background-color: gray;
         border: 1px solid black;
+        margin-left: calc((100% - 136px)/2);
         margin-bottom: 10px;
     }
 
@@ -355,25 +358,25 @@
 
     #skills-container {
 
+        padding-top: 2%;
         display: block;
-        margin-left: 864px;
-        margin-top: -450px;
+        box-sizing: border-box;
         width: fit-content;
         height: 550px;
     }
 
     #skills-container-two {
 
+        padding-top: 2%;
         display: block;
-        margin-left: 1152px;
-        margin-top: -450px;
         width: fit-content;
         height: 50px;
     }
 
     #skills-container > ul {
-    transition: transform 0.3s ease;
-    transform: scale(1);
+
+        transition: transform 0.3s ease;
+        transform: scale(1);
     }
 
     #skills-container:hover > ul {

@@ -31,60 +31,37 @@
                     elemFour.classList.add("random")
 
                 })
+                
+                if(window.innerWidth > 768) {
 
-                window.addEventListener('wheel', (event) => {
+                    window.addEventListener('wheel', (event) => {
 
-                    const scrollY = window.scrollY
-                    
-                    elemFive.classList.add("random2")
-                    elemFive.style.opacity = "1";
-                    if(scrollY > 800 && scrollY < 1200) {
+                        const scrollY = window.scrollY
+                        
+                        elemFive.classList.add("random2")
+                        elemFive.style.opacity = "1";
+                        if(scrollY > 800 && scrollY < 1200) {
 
-                        elemOne.classList.add("random")
-                    }
+                            elemOne.classList.add("random")
+                        }
 
-                    if(scrollY > 900 && scrollY < 1200) {
+                        if(scrollY > 900 && scrollY < 1200) {
 
-                        elemTwo.classList.add("random")
-                    }
+                            elemTwo.classList.add("random")
+                        }
 
-                    if(scrollY > 920 && scrollY < 1200) {
+                        if(scrollY > 920 && scrollY < 1200) {
 
-                        elemThree.classList.add("random")
-                    }
+                            elemThree.classList.add("random")
+                        }
 
-                    if(scrollY > 940 && scrollY < 1200) {
+                        if(scrollY > 940 && scrollY < 1200) {
 
-                        elemFour.classList.add("random")
-                    }
-                })
+                            elemFour.classList.add("random")
+                        }
+                    })
+                }
 
-                window.addEventListener('touchend', (event) => {
-
-                    const scrollY = event.changedTouches[0].clientY
-                    
-                    elemFive.classList.add("random2")
-                    elemFive.style.opacity = "1";
-                    if(scrollY > 3100) {
-
-                        elemOne.classList.add("random")
-                    }
-
-                    if(scrollY > 3300) {
-
-                        elemTwo.classList.add("random")
-                    }
-
-                    if(scrollY > 3500) {
-
-                        elemThree.classList.add("random")
-                    }
-
-                    if(scrollY > 3700) {
-
-                        elemFour.classList.add("random")
-                    }
-                })
 
             })
            
@@ -162,67 +139,68 @@
 
                 </div>
                 
+                <h1 style="font-family: Courier New; margin-right: 50px;">Skills</h1>
 
                 <div style="color: black;" id="skills-container">
 
-                    <h1>Skills</h1>
+                    
 
-                    <strong>Programming</strong>
+                    <strong style="font-family: Courier New;">Programming</strong>
 
                     <ul>
 
-                        <li>Java</li>
-                        <li>Python</li>
-                        <li>JavaScript</li>
+                        <li style="font-family: Courier New;">Java</li>
+                        <li style="font-family: Courier New;">Python</li>
+                        <li style="font-family: Courier New;">JavaScript</li>
                     </ul>
 
-                    <strong>Web Development</strong>
+                    <strong style="font-family: Courier New;">Web Development</strong>
 
                     <ul>
 
-                        <li>HTML/CSS</li>
-                        <li>Node.js</li>
-                        <li>Express.js</li>
-                        <li>Passport.js</li>
+                        <li style="font-family: Courier New;">HTML/CSS</li>
+                        <li style="font-family: Courier New;">Node.js</li>
+                        <li style="font-family: Courier New;">Express.js</li>
+                        <li style="font-family: Courier New;">Passport.js</li>
 
                     </ul>
 
-                    <strong>Database Management</strong>
+                    <strong style="font-family: Courier New;">Database Management</strong>
 
                     <ul>
 
-                        <li>SQL (PostgreSQL)</li>
+                        <li style="font-family: Courier New;">SQL (PostgreSQL)</li>
                     </ul>
 
                 </div>
 
                 <div style="color: black;" id="skills-container-two">
 
-                    <strong>Testing and Automation</strong>
+                    <strong style="font-family: Courier New;">Testing and Automation</strong>
 
                     <ul>
 
-                        <li>TDD (Test Driven Development)</li>
-                        <li>Continuous Integration</li>
+                        <li style="font-family: Courier New;">TDD (Test Driven Development)</li>
+                        <li style="font-family: Courier New;">Continuous Integration</li>
                     </ul>
 
-                    <strong>Development Tools</strong>
+                    <strong style="font-family: Courier New;">Development Tools</strong>
 
                     <ul>
 
-                        <li>VS Code</li>
-                        <li>Git</li>
+                        <li style="font-family: Courier New;">VS Code</li>
+                        <li style="font-family: Courier New;">Git</li>
 
                     </ul>
 
-                    <strong>Software Development Practices</strong>
+                    <strong style="font-family: Courier New;">Software Development Practices</strong>
 
                     <ul>
 
-                        <li>REST API Development</li>
-                        <li>Don't Repeat Yourself (DRY)</li>
-                        <li>Predictive and Adaptive Methodologies</li>
-                        <li>Software Development Life Cycle</li>
+                        <li style="font-family: Courier New;">REST API Development</li>
+                        <li style="font-family: Courier New;">Don't Repeat Yourself (DRY)</li>
+                        <li style="font-family: Courier New;">Predictive and Adaptive Methodologies</li>
+                        <li style="font-family: Courier New;">Software Development Life Cycle</li>
                     </ul>
 
                 </div>
@@ -314,15 +292,15 @@
 
                 <div id="education-container">
 
-                    <h1>Education</h1>
+                    <h1 style="color: white;">Education</h1>
 
                     <div style="background: linear-gradient(
-  to right,
-  #004080,   /* deep navy blue */
-  #007bff,   /* bright blue */
-  #ffd93b,   /* warm yellow */
-  #fff176    /* light yellow */
-); text-align: center; background-color: darkblue; color: black;" id="otago-container">
+        to top,
+        #ffffff,   /* white */
+        #f9f9f9,   /* very light gray */
+        #ededed,   /* light gray */
+        #cccccc    /* medium-light gray */
+    ); text-align: center; color: black;" id="otago-container">
 
                         <h2>University of Otago</h2>
                         <h3>Software Engineering BsC</h3>
@@ -331,9 +309,9 @@
 
                         <ul style="text-align: center;">
 
-                            <div class="badge" style="margin-left: 30px;">Programming with Java</div>
+                            <div class="badge">Programming with Java</div>
                             <div class="badge">Software Development</div>
-                            <div class="badge" style="margin-left: 30px;">Algorithms & Data Structures</div>
+                            <div class="badge">Algorithms & Data Structures</div>
                             <div class="badge">HCI & User Experience</div>
                         </ul>
 
@@ -342,7 +320,13 @@
                     <br>
                     <br>
 
-                    <div style="background: linear-gradient(135deg, #0B1D51, #1E3A8A, #FFD600); background-color: #10162F; color: #CCA900; text-align: center;" id="back-end-engineer-container">
+                    <div style="background: linear-gradient(
+        to top,
+        #ffffff,   /* white */
+        #f9f9f9,   /* very light gray */
+        #ededed,   /* light gray */
+        #cccccc    /* medium-light gray */
+    ); background-color: #10162F; color: black; text-align: center;" id="back-end-engineer-container">
 
                         <h2>Codecademy</h2>
                         <h3>Back End Engineer Professional Certification</h3>
@@ -352,9 +336,9 @@
                         <ul>
 
                             <div class="badge">HTML, CSS, JavaScript, Node.js</div>
-                            <div class="badge" style="margin-left: 30px;">Express.js, PostgreSQL</div>
+                            <div class="badge">Express.js, PostgreSQL</div>
                             <div class="badge">Web Security, Scalability</div>
-                            <div class="badge" style="margin-left: 30px;">Data Structures, and Algorithms</div>
+                            <div class="badge">Data Structures, and Algorithms</div>
                         </ul>
 
                     </div>
@@ -366,18 +350,16 @@
                     <h1>Experiences</h1>
 
                     <div style="background: linear-gradient(
-  to right,
-  #ffffff,   /* white */
-  #ffe5b4,   /* light orange / peach */
-  #f97316,   /* medium orange */
-  #ea580c,   /* deep orange */
-  #c2410c    /* burnt orange */
-);"id="java-developer-container">
+        to bottom,
+        #444444,  /* dark gray */
+        #222222,  /* darker gray */
+        #000000   /* black */
+    );"id="java-developer-container">
 
-                        <h2 style="color: #F29111; padding-left: 30px;">Freelance</h2>
-                        <h3 style="color: #F29111; padding-left: 30px;">Java Developer</h3>
-                        <h4 style="color: #F29111; padding-left: 30px;">2024 - Present</h4>
-                        <ul style="color: #053242; padding-bottom: 40px; padding-left: 80px;">
+                        <h2 style="color: white; padding-left: 30px;">Freelance</h2>
+                        <h3 style="color: white; padding-left: 30px;">Java Developer</h3>
+                        <h4 style="color: white; padding-left: 30px;">2024 - Present</h4>
+                        <ul style="color: white; padding-bottom: 40px; padding-left: 80px;">
 
                             <li>Automated unit testing, public API updates, and JAR file releases through the development of a continuous integration pipeline on GitLab cutting manual effort by 20%</li>
                             <li>Built an initial prototype of an application that later helped over 50 university students struggling with university catch up have personalised catch 
@@ -387,13 +369,18 @@
 
                     </div>
 
-                    <div style="background: yellow;" id="web-developer-container">
+                    <div style="background: linear-gradient(
+        to bottom,
+        #444444,  /* dark gray */
+        #222222,  /* darker gray */
+        #000000   /* black */
+    );" id="web-developer-container">
 
-                        <h2 style="color: black; padding-left: 30px;">Freelance</h2>
-                        <h3 style="color: black; padding-left: 30px;">Web Developer</h3>
-                        <h4 style="color: black; padding-left: 30px;">2024 - Present</h4>
+                        <h2 style="color: white; padding-left: 30px;">Freelance</h2>
+                        <h3 style="color: white; padding-left: 30px;">Web Developer</h3>
+                        <h4 style="color: white; padding-left: 30px;">2024 - Present</h4>
 
-                        <ul style="padding-left: 80px; padding-bottom: 40px;"">
+                        <ul style="color: white; padding-left: 80px; padding-bottom: 40px;">
 
                             <li>Developed a full-stack web application that has helped over 50 university students catch up on missed lectures by having the application generate a timetable for them</li>
                             <li>Hosted a web service to communicate with a database that has allowed over 70 players to view, and strive for leaderboard scores on a zombie horror game developed using Unity</li>
@@ -402,13 +389,11 @@
                     </div>
 
                     <div style="background: linear-gradient(
-  to right,
-  #ffffff,    /* white */
-  #cce7ff,    /* very light blue */
-  #66b2ff,    /* sky blue */
-  #007bff,    /* vibrant blue */
-  #004080     /* deep navy blue */
-); color: black; padding-left: 30px; padding-bottom: 40px;" id="software-tester-container">
+        to bottom,
+        #444444,  /* dark gray */
+        #222222,  /* darker gray */
+        #000000   /* black */
+    ); color: white; padding-left: 30px; padding-bottom: 40px;" id="software-tester-container">
 
                         <h2>uTest</h2>
                         <h3>Software Tester</h3>
@@ -424,12 +409,11 @@
                     </div>
 
                     <div style="background: linear-gradient(
-  to right,
-  #004080,   /* deep navy blue */
-  #007bff,   /* bright blue */
-  #ffd93b,   /* warm yellow */
-  #fff176    /* light yellow */
-); color: yellow; padding-left: 40px; padding-bottom: 40px;" id="notetaker-container">
+        to bottom,
+        #444444,  /* dark gray */
+        #222222,  /* darker gray */
+        #000000   /* black */
+    ); color: white; padding-left: 40px; padding-bottom: 40px;" id="notetaker-container">
 
                         <h2>University of Otago</h2>
                         <h3>Disability & Information Services Notetaker</h3>
@@ -445,11 +429,6 @@
 
                 </div>
             </div>
-        </div>
-
-        <div id="skills">
-
-            
         </div>
 
         <div id="footer">

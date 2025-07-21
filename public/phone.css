@@ -196,16 +196,6 @@
         background-color: black;
         color: white;
         align-items: center;
-
-        transition: transform 0.3s ease;
-        transform: scale(1);
-        
-    }
-
-    .project-container:hover {
-
-        z-index: 3;
-        transform: scale(1.1);
         
     }
 
@@ -287,32 +277,6 @@
 
     }
 
-    @keyframes slideInFromRight {
-
-        from {
-            opacity: 0;
-            transform: translateX(1000px);
-        }
-        to {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-
-    #experience-container div {
-
-        opacity: 0;
-        transform: translateX(1000px);
-        transition: none;
-        
-    }
-
-    .random {
-        
-        animation: slideInFromRight 1s ease-out forwards;
-
-    }
-
     .random2 {
 
         animation: popAndRotate 1s ease-out forwards;
@@ -354,26 +318,6 @@
         display: block;
         width: fit-content;
         height: 50px;
-    }
-
-    #skills-container > ul {
-    transition: transform 0.3s ease;
-    transform: scale(1);
-    }
-
-    #skills-container:hover > ul {
-    
-        transform: scale(1.15);
-    }
-
-    #skills-container-two > * {
-        transition: transform 0.3s ease;
-        transform: scale(1);
-    }
-
-    #skills-container-two:hover > * {
-        
-        transform: scale(1.15);
     }
 
 }
