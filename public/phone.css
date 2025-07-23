@@ -192,6 +192,13 @@
 
     }
 
+    .click {
+
+        width: 200px;
+        margin-left: 92px;
+        margin-top: -50px;
+    }
+
     @keyframes fade-in {
 
         from {
@@ -265,7 +272,7 @@
             #000000   /* black */
         );
         border-top: 5px solid black;
-        top: 3350px;
+        top: 5600px;
         min-height: 1445px;
         position: absolute;
         left: 0vw;
@@ -340,7 +347,7 @@
 
     #footer-container {
 
-        top: 6050px;
+        top: 8200px;
         position: absolute;
         background: gray;
         width: 100%;

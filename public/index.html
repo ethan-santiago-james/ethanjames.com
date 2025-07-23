@@ -40,22 +40,22 @@
                         
                         elemFive.classList.add("random2")
                         elemFive.style.opacity = "1";
-                        if(scrollY > 800 && scrollY < 1200) {
+                        if(scrollY > 1400) {
 
                             elemOne.classList.add("random")
                         }
 
-                        if(scrollY > 900 && scrollY < 1200) {
+                        if(scrollY > 1500) {
 
                             elemTwo.classList.add("random")
                         }
 
-                        if(scrollY > 920 && scrollY < 1200) {
+                        if(scrollY > 1600) {
 
                             elemThree.classList.add("random")
                         }
 
-                        if(scrollY > 940 && scrollY < 1200) {
+                        if(scrollY > 1700) {
 
                             elemFour.classList.add("random")
                         }
@@ -147,8 +147,10 @@
 
                         <strong>Programming</strong>
                         <p>Java</p>
-                        <p>Python</p>
+                        <p>Python (Scikit-Learn)</p>
+                        <p>C#</p>
                         <p>JavaScript</p>
+                        
                     </ul>
 
                     <ul>
@@ -162,20 +164,23 @@
                     </ul>
 
                     <ul>
-                        <strong>Database Management</strong>
+                        <strong>Database Management/Game Development</strong>
                         <p>SQL (PostgreSQL)</p>
+                        <p>Unity (C#)</p>
                     </ul>
 
                     <ul>
-                        <strong>Testing and Automation</strong>
-                        <p>TDD (Test Driven Development)</p>
-                        <p>Continuous Integration</p>
+                        <strong>Machine Learning</strong>
+                        <p>Supervised, and Unsupervised Learning</p>
+                        <p>Hyperparameter Tuning</p>
+                        <p>ML Pipelines</p>
                     </ul>
 
                     <ul>
                         <strong>Development Tools</strong>
                         <p>VS Code</p>
                         <p>Git</p>
+                        <p>GitHub/GitLab</p>
                     </ul>
 
                     <ul>
@@ -206,71 +211,143 @@
         
             <div id="projects-container">
 
-                <h2 id="projects-header" style="color: black;">Featured Projects</h2>
-                <div class="project-container" id="lecture-cram-planner">
+                <div id="projects-container-one">
 
-                    <img src="res/lcp.png">
-                    <p style="text-align: center;">Lecture Cram Planner</p>
-                    
-                    <ul>
+                    <h2 id="projects-header" style="color: black;">Featured Projects</h2>
+                    <div class="project-container" id="lecture-cram-planner">
 
-                        <li>HTML/CSS</li>
-                        <li>Node.js, Express.js</li>
-                        <li>PostgreSQL</li>
-                    </ul>
-
-                    <p class="project-description">A website that helps students catch up on missed lectures by having
-                        it generate a catch-up timetable for them.
-                    </p>
-
-                    <a href="https://lecture-cram-planner-v2-0.onrender.com/" download>
-                        <img src="res/website-icon-23.png" id="website">
-                    </a>
-                    
-                </div>
-
-                <div class="project-container" id="zombie-horror-game">
-
-                    <img src="res/horrorgame.png">
-                    <p style="text-align: center;">Zombie Horror Game</p>
-                    <ul>
-
-                        <li>Unity</li>
-                        <li>C#</li>
-                        <li>API Development, SQL</li>
-
-                    </ul>
-
-                    <p style="text-align: justify; padding-right: 10px;"class="project-description">A horror game developed using Unity where players have to survive as 
-                        long as possible by eating food, and attacking zombies.
-                    </p>
-
-                    <a href="https://play.unity.com/en/games/3577653b-22cf-42e0-b658-ae589bb4f53f/zombie-horror-game" download>
-                        <img src="res/playbuttonclear.png" id="play">
-                    </a>
-                </div>
-
-                <div class="project-container" id="andie">
-
-                    <img id="andie-img" src="res/andie.png">
-                    <p style="text-align: center;">ANDIE (A Non-Destructive Image Editor)</p>
-
-                    <ul>
-
-                        <li>Java (Swing)</li>
-                        <li>Continuous Integration</li>
+                        <img src="res/lcp.png">
+                        <p style="text-align: center;">Lecture Cram Planner</p>
                         
-                    </ul>
+                        <ul>
 
-                    <p style="text-align: justify; padding-right: 10px;" class="project-description">Collaboratively developed image editor application where my main responsibilities
-                        were setting up the CI pipeline, and the "Record Macro" feature.
-                    </p>
+                            <li>HTML/CSS</li>
+                            <li>Node.js, Express.js</li>
+                            <li>PostgreSQL</li>
+                        </ul>
 
-                    <a href="res/andie-1.0.0.jar" download>
-                        <img style="width: 40px; height: 40px;" id="download" src="res/downloads-icon-15.png">
-                    </a>
-                </div>  
+                        <p class="project-description">A website that helps students catch up on missed lectures by having
+                            it generate a catch-up timetable for them.
+                        </p>
 
+                        <a href="https://lecture-cram-planner-v2-0.onrender.com/" download>
+                            <img src="res/website-icon-23.png" id="website">
+                        </a>
+                        
+                    </div>
+
+                    <div class="project-container" id="zombie-horror-game">
+
+                        <img src="res/horrorgame.png">
+                        <p style="text-align: center;">Zombie Horror Game</p>
+                        <ul>
+
+                            <li>Unity</li>
+                            <li>C#</li>
+                            <li>API Development, SQL</li>
+
+                        </ul>
+
+                        <p style="text-align: justify; padding-right: 10px;"class="project-description">A horror game developed using Unity where players have to survive as 
+                            long as possible by eating food, and attacking zombies.
+                        </p>
+
+                        <a href="https://play.unity.com/en/games/3577653b-22cf-42e0-b658-ae589bb4f53f/zombie-horror-game" download>
+                            <img src="res/playbuttonclear.png" id="play">
+                        </a>
+                    </div>
+
+                    <div class="project-container" id="andie">
+
+                        <img id="andie-img" src="res/andie.png">
+                        <p style="text-align: center;">ANDIE (A Non-Destructive Image Editor)</p>
+
+                        <ul>
+
+                            <li>Java (Swing)</li>
+                            <li>Continuous Integration</li>
+                            
+                        </ul>
+
+                        <p style="text-align: justify; padding-right: 10px;" class="project-description">Collaboratively developed image editor application where my main responsibilities
+                            were setting up the CI pipeline, and the "Record Macro" feature.
+                        </p>
+
+                        <a href="res/andie-1.0.0.jar" download>
+                            <img style="width: 40px; height: 40px;" id="download" src="res/downloads-icon-15.png">
+                        </a>
+                    </div>
+
+                </div>
+                  
+                <div id="projects-container-two">
+
+                     <div class="project-container" id="lecture-cram-planner">
+
+                        <img src="res/scraper.png">
+                        <p style="text-align: center;">Internship Web Scraper</p>
+                        
+                        <ul>
+
+                            <li>Python</li>
+                            <li>Selenium</li>
+                            <li>Beautiful Soup</li>
+                        </ul>
+
+                        <p class="project-description">An application that automates internship by scraping the web for opportunities from various companies. 
+                        </p>
+
+                        <a href="https://github.com/ethan-santiago-james/Internship-Web-Scraper/tree/master">
+                            <img src="res/Click-Here-PNG-Pic.png" class="click">
+                        </a>
+                        
+                    </div>
+
+                    <div class="project-container" id="zombie-horror-game">
+
+                        <img src="res/ML.jpg">
+                        <p style="text-align: center;">Machine Learning Practice</p>
+                        <ul>
+
+                            <li>Scikit-Learn</li>
+                            <li>Supervised, and Unsupervised Learning</li>
+                            <li>Hyperparameter Tuning</li>
+
+                        </ul>
+
+                        <p style="text-align: justify; padding-right: 10px;"class="project-description">A repository of machine learning projects where I am 
+                            refining my skills with developing accurate supervised, and unsupervised learning algorithms.
+                        </p>
+
+                        <a href="https://github.com/ethan-santiago-james/ML-Practice">
+                            <img src="res/Click-Here-PNG-Pic.png" class="click">
+                        </a>
+                    </div>
+
+                    <div class="project-container" id="athletics-race-simulator">
+
+                        <img id="andie-img" src="res/athletics.png">
+                        <p style="text-align: center;">Athletics Race Simulator</p>
+
+                        <ul>
+
+                            <li>Java (Swing)</li>
+                            <li>Mathematical Modelling</li>
+                            
+                        </ul>
+
+                        <p style="text-align: justify; padding-right: 10px;" class="project-description">Developed a program that can allow you to view any running race you desire. If 
+                            you want to see a race between yourself, and Usain Bolt, this program can make it happen.
+                        </p>
+
+                        <a href="https://github.com/ethan-santiago-james/Athletics-Race-Simulator">
+                            <img src="res/Click-Here-PNG-Pic.png" class="click">
+                        </a>
+                    </div>
+
+
+                </div>
+               
             </div>
 
         </div>
@@ -336,7 +413,7 @@
 
                 <div id="experience-container">
 
-                    <h1 id="experiences-header">Experiences</h1>
+                    <h1 id="experiences-header">Employment</h1>
 
                     <div style="background: linear-gradient(
         to bottom,
@@ -345,14 +422,15 @@
         #000000   /* black */
     );"id="java-developer-container">
 
-                        <h2 style="color: white; padding-left: 30px;">Freelance</h2>
-                        <h3 style="color: white; padding-left: 30px;">Java Developer</h3>
-                        <h4 style="color: white; padding-left: 30px;">2024 - Present</h4>
+                        <h2 style="color: white; padding-left: 30px;">About You Giftboxes</h2>
+                        <h3 style="color: white; padding-left: 30px;">Software Consultant</h3>
+                        <h4 style="color: white; padding-left: 30px;">Jun - Jul 2025</h4>
                         <ul style="color: white; padding-bottom: 40px; padding-left: 80px;">
 
-                            <li>Automated unit testing, public API updates, and JAR file releases through the development of a continuous integration pipeline on GitLab cutting manual effort by 20%</li>
-                            <li>Built an initial prototype of an application that later helped over 50 university students struggling with university catch up have personalised catch 
-                                up timetables generated for them
+                            <li>Assisted emerging business owners in reducing e-commerce setup costs by up to $6,000 through hands on 
+                                Shopify website development and initial configuration</li>
+                            <li>Advised them that they would be fine to develop on their own with Shopify than hire an 
+                                experienced developer
                             </li>
                         </ul>
 
@@ -365,14 +443,14 @@
         #000000   /* black */
     );" id="web-developer-container">
 
-                        <h2 style="color: white; padding-left: 30px;">Freelance</h2>
+                        <h2 style="color: white; padding-left: 30px;">R2M Fitness</h2>
                         <h3 style="color: white; padding-left: 30px;">Web Developer</h3>
-                        <h4 style="color: white; padding-left: 30px;">2024 - Present</h4>
+                        <h4 style="color: white; padding-left: 30px;">2025 - Present</h4>
 
                         <ul style="color: white; padding-left: 80px; padding-bottom: 40px;">
 
-                            <li>Developed a full-stack web application that has helped over 50 university students catch up on missed lectures by having the application generate a timetable for them</li>
-                            <li>Hosted a web service to communicate with a database that has allowed over 70 players to view, and strive for leaderboard scores on a zombie horror game developed using Unity</li>
+                            <li>Recently employed to make an alternate web design for R2M Fitness to 
+                                improve the aesthetics, and navigability of the website</li>
                         </ul>
 
                     </div>

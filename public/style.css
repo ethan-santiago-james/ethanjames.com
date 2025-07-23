@@ -187,10 +187,9 @@
 
         padding-top: 5%;
         position: absolute;
-        height: 700px;
+        height: 1500px;
         width: 100%;
         border-top: 5px solid black;
-        border-bottom: 5px solid black;
         background: linear-gradient(
             to left,
             #f0f0f0,  /* light grey */
@@ -200,12 +199,28 @@
             #000000   /* black */
         );
 
-        display: flex;
-        gap: 50px;
-
         top: 600px;
         left: 0vw;
         overflow-x: hidden;
+
+    }
+
+    #projects-container-one {
+
+        display: flex;
+        height: fit-content;
+        gap: 50px;
+        left: 0vw;
+    }
+
+    #projects-container-two {
+
+        margin-top: 50px;
+        margin-left: 5%;
+        display: flex;
+        height: fit-content;
+        gap: 50px;
+        left: 0vw;
 
     }
 
@@ -232,6 +247,26 @@
         transition: transform 0.3s ease;
         transform: scale(1);
         
+    }
+
+    #athletics-race-simulator {
+
+        width: 580px !important;
+
+    }
+
+    .click {
+
+        width: 200px;
+        margin-left: 92px;
+        margin-top: -50px;
+    }
+
+    #athletics-race-simulator .click {
+
+        width: 200px; 
+        margin-left: 190px; 
+        margin-top: -50px;
     }
 
     .project-container:hover {
@@ -293,7 +328,7 @@
             #000000   /* black */
         );
         border-top: 5px solid black;
-        top: 1300px;
+        top: 2100px;
         height: 1000px;
         position: absolute;
         left: 0vw;
@@ -406,7 +441,7 @@
 
         display: flex;
         align-items: center;
-        top: 2745px;
+        top: 3345px;
         position: absolute;
         gap: 70vw;
         background: gray;
