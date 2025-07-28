@@ -11,9 +11,75 @@
 
         <script>
             
+            function manageClouds() {
 
+                if(window.innerWidth >= 768) {
+
+                        const clouds = document.getElementsByClassName("cloud")
+                        const cloudContainers = document.getElementsByClassName("project-container")
+                        const intercept = 22
+                        const slope = 14
+
+                        for (let i = 0; i < clouds.length; i++) {
+
+                            let containerLength = cloudContainers[0].offsetWidth
+
+                            if(i > 8 && clouds[i].innerText === "Java (Swing)" || clouds[i].innerText === "Mathematical Modelling") {
+
+                                containerLength = cloudContainers[5].offsetWidth
+
+                            }
+                            
+
+                            let width = clouds[i].offsetWidth
+
+                            let offsetLeft = (containerLength - width)/2
+                            clouds[i].style.marginLeft = offsetLeft + "px"
+
+                        }
+
+                    }
+
+            }
             window.addEventListener("DOMContentLoaded",() => {
 
+                manageClouds()
+                let previousWidth = window.innerWidth
+                window.addEventListener("resize", () => {
+
+                    manageClouds()
+                    const skillContainer = document.getElementById('skills-container')
+                    const img = document.getElementById('big-pfp')
+                    if(window.innerWidth > previousWidth) {
+
+                        const skillLists = skillContainer.getElementsByTagName("ul")
+                        for (let i = 0; i < skillLists.length; i++) {
+
+                            const currentSize = parseFloat(getComputedStyle(skillLists[i]).fontSize);
+                            let newSize = Math.min(15,currentSize+1)
+                            skillLists[i].style.fontSize = newSize + "px";
+                                    
+                        }
+
+                    } else {
+
+                        if(img.getBoundingClientRect().right > window.innerWidth) {
+
+                            const skillLists = skillContainer.getElementsByTagName("ul")
+                            for (let i = 0; i < skillLists.length; i++) {
+
+                                const currentSize = parseFloat(getComputedStyle(skillLists[i]).fontSize);
+                                skillLists[i].style.fontSize = (currentSize - 2) + "px";
+                                    
+                            }
+                        }
+
+                    }
+                   
+                    
+
+                }) 
+                
                 document.getElementById('description-container').offsetLeft = "0"
                 const elemOne = document.getElementById('java-developer-container')
                 const elemTwo = document.getElementById('web-developer-container')
@@ -87,27 +153,24 @@
         <div id="front-page">
 
             
-            <div style="color: white;" id="description-container">
+            <div id="description-container">
 
-                <div style="margin-left: 50px;" id="welcome-container">
+                <div id="welcome-container">
 
                     <h2 id="welcome-message">Hello, I'm Ethan James</h2>
-                    <p style="text-align: justify;" id="ethan-description">Welcome, I'm a Java, and Python developer with 2 years experience. I have a proven 
+                    <p id="ethan-description">Welcome, I'm a Java, and Python developer with 2 years experience. I have a proven 
                     ability to build software that has an impact for the betterment of society. I am highly proficient in Java, SQL, Python, 
                     and JavaScript. Seeking a software engineering intern position to drive innovation, optimise performance at scale, and 
                     use my technical skills to make a real world impact.</p>
 
-                    <p id="skills-header">I'm currently developing with,</p>
+                    <p>I'm currently developing with,</p>
 
-                    <ul id="skills">
-
-                        <li>Java</li>
-                        <li>Python</li>
-                        <li>HTML/CSS</li>
-                        <li>Node.js</li>
-                        <li>Express.js</li>
-                        <li>Unity (C#)</li>
-                    </ul>
+                    <p id="java-skill">Java</p>
+                    <p id="python-skill">Python</p>
+                    <p id="html-skill">HTML/CSS</p>
+                    <p id="node-skill">Node.js</p>
+                    <p id="express-skill">Express.js</p>
+                    <p id="unity-skill">Unity (C#)</p>
 
                     <div id="link-container">
 
@@ -132,72 +195,75 @@
                     </div>
 
                 </div>
-                
-                <h1 id="skills-header" style="margin-right: 50px;">Skills</h1>
+            
+                <h1 id="skills-header">Skills</h1>
+                <div id="skills-flexbox">
 
-                <div style="color: black;" id="skills-container">
+                    <div id="skills-container">
 
-                    <ul>
+                        <ul class="skill-section">
 
-                        <strong>Programming</strong>
-                        <p>Java</p>
-                        <p>Python (Scikit-Learn)</p>
-                        <p>C#</p>
-                        <p>JavaScript</p>
+                            <strong>Programming</strong>
+                            <p>Java</p>
+                            <p>Python (Scikit-Learn)</p>
+                            <p>C#</p>
+                            <p>JavaScript</p>
+                            
+                        </ul>
+
+                        <ul class="skill-section">
+
+                            <strong>Web Development</strong>
+                            <p>HTML/CSS</p>
+                            <p>Node.js</p>
+                            <p>Express.js</p>
+                            <p>Passport.js</p>
+
+                        </ul>
+
+                        <ul class="skill-section">
+                            <strong>Databases/Game Development</strong>
+                            <p>SQL (PostgreSQL)</p>
+                            <p>Unity (C#)</p>
+                        </ul>
+
+                        <ul class="skill-section">
+                            <strong>Machine Learning</strong>
+                            <p>Supervised, and Unsupervised Learning</p>
+                            <p>Hyperparameter Tuning</p>
+                            <p>ML Pipelines</p>
+                        </ul>
+
+                        <ul class="skill-section">
+                            <strong>Development Tools</strong>
+                            <p>VS Code</p>
+                            <p>Git</p>
+                            <p>GitHub/GitLab</p>
+                        </ul>
+
+                        <ul class="skill-section">
+                            <strong>Software Development Practices</strong>
+                            <p>REST API Development</p>
+                            <p>Don't Repeat Yourself (DRY)</p>
+                            <p>Predictive and Adaptive Methodologies</p>
+                            <p>Software Development Life Cycle</p>
+                        </ul>
+
                         
-                    </ul>
-
-                    <ul>
-
-                        <strong>Web Development</strong>
-                        <p>HTML/CSS</p>
-                        <p>Node.js</p>
-                        <p>Express.js</p>
-                        <p>Passport.js</p>
-
-                    </ul>
-
-                    <ul>
-                        <strong>Databases/Game Development</strong>
-                        <p>SQL (PostgreSQL)</p>
-                        <p>Unity (C#)</p>
-                    </ul>
-
-                    <ul>
-                        <strong>Machine Learning</strong>
-                        <p>Supervised, and Unsupervised Learning</p>
-                        <p>Hyperparameter Tuning</p>
-                        <p>ML Pipelines</p>
-                    </ul>
-
-                    <ul>
-                        <strong>Development Tools</strong>
-                        <p>VS Code</p>
-                        <p>Git</p>
-                        <p>GitHub/GitLab</p>
-                    </ul>
-
-                    <ul>
-                        <strong>Software Development Practices</strong>
-                        <p>REST API Development</p>
-                        <p>Don't Repeat Yourself (DRY)</p>
-                        <p>Predictive and Adaptive Methodologies</p>
-                        <p>Software Development Life Cycle</p>
-                    </ul>
-
-                </div>
-
-                <div style="color: black;" id="skills-container-two">
-
+                    </div>
+                    <img id="big-pfp" src="res/cropped_circle_image.png">
                     
-
                 </div>
+                
+                
+                
                 
             </div>
 
             
 
             <img id="pfp" src="res/cropped_circle_image.png">
+            
         </div>
 
         <div id="featured-projects">
@@ -207,17 +273,17 @@
 
                 <div id="projects-container-one">
 
-                    <h2 id="projects-header" style="color: black;">Featured Projects</h2>
+                    <h2 id="projects-header">Featured Projects</h2>
                     <div class="project-container" id="lecture-cram-planner">
 
                         <img src="res/lcp.png">
-                        <p style="text-align: center;">Lecture Cram Planner</p>
+                        <p id="lecture-cram-planner-header">Lecture Cram Planner</p>
                         
                         <ul>
 
-                            <li>HTML/CSS</li>
-                            <li>Node.js, Express.js</li>
-                            <li>PostgreSQL</li>
+                            <p class="cloud">HTML/CSS</p>
+                            <p class="cloud">Node.js, Express.js</p>
+                            <p class="cloud">PostgreSQL</p>
                         </ul>
 
                         <p class="project-description">A website that helps students catch up on missed lectures by having
@@ -233,16 +299,16 @@
                     <div class="project-container" id="zombie-horror-game">
 
                         <img src="res/horrorgame.png">
-                        <p style="text-align: center;">Zombie Horror Game</p>
+                        <p id="horror-game-header">Zombie Horror Game</p>
                         <ul>
 
-                            <li>Unity</li>
-                            <li>C#</li>
-                            <li>API Development, SQL</li>
+                            <p class="cloud">Unity</p>
+                            <p class="cloud">C#</p>
+                            <p class="cloud">API Development, SQL</p>
 
                         </ul>
 
-                        <p style="text-align: justify; padding-right: 10px;"class="project-description">A horror game developed using Unity where players have to survive as 
+                        <p id="horror-game-desc" class="project-description">A horror game developed using Unity where players have to survive as 
                             long as possible by eating food, and attacking zombies.
                         </p>
 
@@ -254,21 +320,21 @@
                     <div class="project-container" id="andie">
 
                         <img id="andie-img" src="res/andie.png">
-                        <p style="text-align: center;">ANDIE (A Non-Destructive Image Editor)</p>
+                        <p id="andie-text">ANDIE (A Non-Destructive Image Editor)</p>
 
                         <ul>
 
-                            <li>Java (Swing)</li>
-                            <li>Continuous Integration</li>
+                            <p class="cloud">Java (Swing)</p>
+                            <p class="cloud">Continuous Integration</p>
                             
                         </ul>
 
-                        <p style="text-align: justify; padding-right: 10px;" class="project-description">Collaboratively developed image editor application where my main responsibilities
+                        <p id="andie-desc" class="project-description">Collaboratively developed image editor application where my main responsibilities
                             were setting up the CI pipeline, and the "Record Macro" feature.
                         </p>
 
                         <a href="res/andie-1.0.0.jar" download>
-                            <img style="width: 40px; height: 40px;" id="download" src="res/downloads-icon-15.png">
+                            <img id="download" src="res/downloads-icon-15.png">
                         </a>
                     </div>
 
@@ -279,13 +345,13 @@
                      <div class="project-container" id="lecture-cram-planner">
 
                         <img src="res/scraper.png">
-                        <p style="text-align: center;">Internship Web Scraper</p>
+                        <p id="web-scraper-desc">Internship Web Scraper</p>
                         
                         <ul>
 
-                            <li>Python</li>
-                            <li>Selenium</li>
-                            <li>Beautiful Soup</li>
+                            <p class="cloud">Python</p>
+                            <p class="cloud">Selenium</p>
+                            <p class="cloud">Beautiful Soup</p>
                         </ul>
 
                         <p class="project-description">An application that automates internship by scraping the web for opportunities from various companies. 
@@ -300,16 +366,16 @@
                     <div class="project-container" id="zombie-horror-game">
 
                         <img src="res/ML.jpg">
-                        <p style="text-align: center;">Machine Learning Practice</p>
+                        <p id="ml-title">Machine Learning Practice</p>
                         <ul>
 
-                            <li>Scikit-Learn</li>
-                            <li>Supervised, and Unsupervised Learning</li>
-                            <li>Hyperparameter Tuning</li>
+                            <p class="cloud">Scikit-Learn</p>
+                            <p class="cloud">Supervised/Unsupervised Learning</p>
+                            <p class="cloud">Hyperparameter Tuning</p>
 
                         </ul>
 
-                        <p style="text-align: justify; padding-right: 10px;"class="project-description">A repository of machine learning projects where I am 
+                        <p id="ml-desc" class="project-description">A repository of machine learning projects where I am 
                             refining my skills with developing accurate supervised, and unsupervised learning algorithms.
                         </p>
 
@@ -321,16 +387,16 @@
                     <div class="project-container" id="athletics-race-simulator">
 
                         <img id="andie-img" src="res/athletics.png">
-                        <p style="text-align: center;">Athletics Race Simulator</p>
+                        <p id="athletics-title">Athletics Race Simulator</p>
 
                         <ul>
 
-                            <li>Java (Swing)</li>
-                            <li>Mathematical Modelling</li>
+                            <p class="cloud">Java (Swing)</p>
+                            <p class="cloud">Mathematical Modelling</p>
                             
                         </ul>
 
-                        <p style="text-align: justify; padding-right: 10px;" class="project-description">Developed a program that can allow you to view any running race you desire. If 
+                        <p id="athletics-desc" class="project-description">Developed a program that can allow you to view any running race you desire. If 
                             you want to see a race between yourself, and Usain Bolt, this program can make it happen.
                         </p>
 
@@ -352,22 +418,16 @@
 
                 <div id="education-container">
 
-                    <h1 style="color: white;" id="education-header">Education</h1>
+                    <h1 id="education-header">Education</h1>
 
-                    <div style="background: linear-gradient(
-        to top,
-        #ffffff,   /* white */
-        #f9f9f9,   /* very light gray */
-        #ededed,   /* light gray */
-        #cccccc    /* medium-light gray */
-    ); text-align: center; color: black;" id="otago-container">
+                    <div id="otago-container">
 
                         <h2>University of Otago</h2>
                         <h3>Bachelor of Science</h3>
                         <h4>2024 - 2026</h4>
                         <h3>Computer Science Courses</h3>
 
-                        <ul style="text-align: center;">
+                        <ul id="education-content">
 
                             <div class="badge">Programming with Java</div>
                             <div class="badge">Software Development</div>
@@ -380,13 +440,7 @@
                     <br>
                     <br>
 
-                    <div style="background: linear-gradient(
-        to top,
-        #ffffff,   /* white */
-        #f9f9f9,   /* very light gray */
-        #ededed,   /* light gray */
-        #cccccc    /* medium-light gray */
-    ); background-color: #10162F; color: black; text-align: center;" id="back-end-engineer-container">
+                    <div id="back-end-engineer-container">
 
                         <h2>Codecademy</h2>
                         <h3>Back End Engineer Professional Certification</h3>
@@ -409,72 +463,52 @@
 
                     <h1 id="experiences-header">Employment</h1>
 
-                    <div style="background: linear-gradient(
-        to bottom,
-        #444444,  /* dark gray */
-        #222222,  /* darker gray */
-        #000000   /* black */
-    );"id="java-developer-container">
+                    <div id="java-developer-container">
 
-                        <h2 style="color: white; padding-left: 30px;">About You Giftboxes</h2>
-                        <h3 style="color: white; padding-left: 30px;">Software Consultant</h3>
-                        <h4 style="color: white; padding-left: 30px;">Jun - Jul 2025</h4>
-                        <ul style="color: white; padding-bottom: 40px; padding-left: 80px;">
+                        <h2 class="employment-info">About You Giftboxes</h2>
+                        <h3 class="employment-info">Software Consultant</h3>
+                        <h4 class="employment-info">Jun - Jul 2025</h4>
+                        <ul id="employment-list">
 
-                            <li>Assisted emerging business owners in reducing e-commerce setup costs by up to $6,000 through hands on 
-                                Shopify website development and initial configuration</li>
-                            <li>Advised them that they would be fine to develop on their own with Shopify than hire an 
+                            <p>Assisted emerging business owners in reducing e-commerce setup costs by up to $6,000 through hands on 
+                                Shopify website development and initial configuration</p>
+                            <p>Advised them that they would be fine to develop on their own with Shopify than hire an 
                                 experienced developer
-                            </li>
+                            </p>
                         </ul>
 
                     </div>
 
-                    <div style="background: linear-gradient(
-        to bottom,
-        #444444,  /* dark gray */
-        #222222,  /* darker gray */
-        #000000   /* black */
-    );" id="web-developer-container">
+                    <div id="web-developer-container">
 
-                        <h2 style="color: white; padding-left: 30px;">R2M Fitness</h2>
-                        <h3 style="color: white; padding-left: 30px;">Web Developer</h3>
-                        <h4 style="color: white; padding-left: 30px;">2025 - Present</h4>
+                        <h2 class="employment-info">R2M Fitness</h2>
+                        <h3 class="employment-info">Web Developer</h3>
+                        <h4 class="employment-info">2025 - Present</h4>
 
-                        <ul style="color: white; padding-left: 80px; padding-bottom: 40px;">
+                        <ul id="employment-list">
 
-                            <li>Recently employed to make an alternate web design for R2M Fitness to 
-                                improve the aesthetics, and navigability of the website</li>
+                            <p>Recently employed to make an alternate web design for R2M Fitness to 
+                                improve the aesthetics, and navigability of the website</p>
                         </ul>
 
                     </div>
 
-                    <div style="background: linear-gradient(
-        to bottom,
-        #444444,  /* dark gray */
-        #222222,  /* darker gray */
-        #000000   /* black */
-    ); color: white; padding-left: 30px; padding-bottom: 40px;" id="software-tester-container">
+                    <div id="software-tester-container">
 
                         <h2>uTest</h2>
                         <h3>Software Tester</h3>
                         <h4>2024 - 2025</h4>
 
-                        <ul style="padding-left: 55px;">
+                        <ul id="software-testing-list">
 
-                            <li>Discovered a high severity bug for Soft2Bet that was approved by moderators</li>
-                            <li>Discovered a high severity bug for F1TV that was approved by moderators</li>
-                            <li>Participated in over 10 paid software test cycles</li>
+                            <p>Discovered a high severity bug for Soft2Bet that was approved by moderators</p>
+                            <p>Discovered a high severity bug for F1TV that was approved by moderators</p>
+                            <p>Participated in over 10 paid software test cycles</p>
                         </ul>
 
                     </div>
 
-                    <div style="background: linear-gradient(
-        to bottom,
-        #444444,  /* dark gray */
-        #222222,  /* darker gray */
-        #000000   /* black */
-    ); color: white; padding-left: 40px; padding-bottom: 40px;" id="notetaker-container">
+                    <div id="notetaker-container">
 
                         <h2>University of Otago</h2>
                         <h3>Disability & Information Services Notetaker</h3>
@@ -482,8 +516,8 @@
 
                         <ul>
 
-                            <li>Produced over 70 detailed note summaries to aid in the learning of students struggling with a disability at university</li>
-                            <li>Produced note summaries for "Algorithms & Data Structures", "HCI & User Experience", and "Web, Databases and Networks" university papers</li>
+                            <p>Produced over 70 detailed note summaries to aid in the learning of students struggling with a disability at university</p>
+                            <p>Produced note summaries for "Algorithms & Data Structures", "HCI & User Experience", and "Web, Databases and Networks" university papers</p>
                         </ul>
 
                     </div>
