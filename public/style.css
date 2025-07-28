@@ -455,10 +455,10 @@
 
     }
 
-    #footer-link {
+    #footer-links {
 
         display: flex;
-        gap: 20vw;
+        gap: 3vw;
     }
 
     #footer-work {
