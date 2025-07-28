@@ -54,13 +54,6 @@
         color: black;
     }
 
-    #resume-link {
-
-        top: 30px;
-        left: 80vw;
-        color: black;
-    }
-
     /* description */
 
 
@@ -104,7 +97,8 @@
     #link-container{
 
         display: flex;
-        gap: 20px;
+        width: fit-content;
+        gap: 20vw;
         margin-left: calc((100vw - 408.82)/2)px;
     }
 
@@ -131,6 +125,7 @@
 
         background-color: aqua;
         color: red;
+        right: 10vw;
     }
 
     /* featured projects */

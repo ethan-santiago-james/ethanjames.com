@@ -69,13 +69,6 @@
         color: black;
     }
 
-    #resume-link {
-
-        top: 30px;
-        left: 75vw;
-        color: black;
-    }
-
     /* description */
 
 
@@ -120,13 +113,7 @@
     #link-container {
 
         display: flex;
-        gap: 39px;
-    }
-
-    #resume-button {
-
-        background-color: red;
-        color: white;
+        gap: 100px;
     }
     #linkedin-button {
 
