@@ -49,12 +49,7 @@ function Project() {
                     with use of the UCI Machine Learning Repository. I plan to make more advanced programs in the future.
                 </p>
             </div>
-            <div className="project">
-                <a href="http://www.wemanage.jp/" target="_blank" rel="noreferrer"><img src={ML} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="http://www.wemanage.jp/" target="_blank" rel="noreferrer"><h2>It's Morphin Time Contribution</h2></a>
-                <p>This is a shapeshifting game that I developed on Unity during a game development competition with three others.
-                </p>
-            </div>
+
             
         </div>
     </div>
