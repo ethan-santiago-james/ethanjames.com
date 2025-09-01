@@ -16,6 +16,20 @@ function Timeline() {
             className="vertical-timeline-element--work"
             contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
             contentArrowStyle={{ borderRight: '7px solid  white' }}
+            date="Aug 2025 - Sep 2025"
+            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
+            icon={<FontAwesomeIcon icon={faBriefcase} />}
+          >
+            <h3 className="vertical-timeline-element-title">Software Developer Intern</h3>
+            <h4 className="vertical-timeline-element-subtitle">Challenz</h4>
+            <p>
+              Mobile App Development, TypeScript, React Native, Expo
+            </p>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
+            contentArrowStyle={{ borderRight: '7px solid  white' }}
             date="2025 - present"
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
@@ -36,18 +50,6 @@ function Timeline() {
             <h4 className="vertical-timeline-element-subtitle">uTest</h4>
             <p>
               Exploratory Testing, Unit Testing, Stakeholder Communication
-            </p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            date="2025 - present"
-            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
-            icon={<FontAwesomeIcon icon={faBriefcase} />}
-          >
-            <h3 className="vertical-timeline-element-title">Disability & Information Services Notetaker</h3>
-            <h4 className="vertical-timeline-element-subtitle">Otago University</h4>
-            <p>
-              Learning Aid, Attention to Detail, Clear Information Presentation
             </p>
           </VerticalTimelineElement>
           
