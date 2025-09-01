@@ -15,13 +15,14 @@ function Project() {
             <div className="project">
                 <a href="https://www.filmate.club/" target="_blank" rel="noreferrer"><img src={lcp} className="zoom" alt="thumbnail" width="100%"/></a>
                 <a href="https://www.filmate.club/" target="_blank" rel="noreferrer"><h2>Lecture Cram Planner</h2></a>
-                <p>Developed a web application that helps students with lecture catch up using HTML, CSS, JavaScript, and SQL</p>
+                <p>Developed a web application that helps students with lecture catch up using HTML, CSS, JavaScript, and SQL. 
+                </p>
             </div>
             <div className="project">
                 <a href="http://www.wemanage.jp/" target="_blank" rel="noreferrer"><img src={andie} className="zoom" alt="thumbnail" width="100%"/></a>
                 <a href="http://www.wemanage.jp/" target="_blank" rel="noreferrer"><h2>ANDIE (A Non Destructive Image Editor)</h2></a>
-                <p>Collaboratively developed image editor application where my main responsibilities where setting up the CI pipeline along 
-                    with adding a macro feature which allows users to define sequences of image operations.
+                <p>Collaboratively developed image editor application where my main responsibilities were setting up the CI pipeline along 
+                    with adding a macro feature which allows users to define sequences of image operations. 
                 </p>
             </div>
             <div className="project">
@@ -48,6 +49,7 @@ function Project() {
                     with use of the UCI Machine Learning Repository. I plan to make more advanced programs in the future.
                 </p>
             </div>
+
             
         </div>
     </div>
