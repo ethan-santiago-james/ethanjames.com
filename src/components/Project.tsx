@@ -19,8 +19,8 @@ function Project() {
                 </p>
             </div>
             <div className="project">
-                <a href="/assets/files/andie-1.0.0.jar" download target="_blank" rel="noreferrer"><img src={andie} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="/assets/files/andie-1.0.0.jar" download target="_blank" rel="noreferrer"><h2>ANDIE (A Non Destructive Image Editor)</h2></a>
+                <a href="https://github.com/ethan-santiago-james/ANDIE-University-Project-" download target="_blank" rel="noreferrer"><img src={andie} className="zoom" alt="thumbnail" width="100%"/></a>
+                <a href="https://github.com/ethan-santiago-james/ANDIE-University-Project-r" download target="_blank" rel="noreferrer"><h2>ANDIE (A Non Destructive Image Editor)</h2></a>
                 <p>Collaboratively developed image editor application where my main responsibilities were setting up the CI pipeline along 
                     with adding a macro feature which allows users to define sequences of image operations. 
                 </p>
